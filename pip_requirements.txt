@@ -1,5 +1,6 @@
 Babel==0.9.6
 Cython==0.20
+geopy==1.11.0
 Kivy==1.9.1
 Kivy-Garden==0.1.4
 requests==2.9.1
