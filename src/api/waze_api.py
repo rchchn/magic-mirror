@@ -1,9 +1,8 @@
 import json
 import requests
-import urllib
 import geopy
 import ast
-import env
+import env #Application Environment Setup
 
 # Some of the ideas from this code were taken and udpated from this guy:  https://github.com/dferrante/waze.  Thanks!  A great start!
 
@@ -25,10 +24,7 @@ class Geocode(object):
         #set these global variables so that the program can use class.address, class.latitude, etc. to call the data
         self.address = address #The fully formed address
         self.latitude = latitude #The latitude coord
-        self.longitude = longitude #the longitude coord
-
-        
-        
+        self.longitude = longitude #the longitude coord 
 
 class WazeAPI(object):
     _BASE_URL_ = "http://waze.com/"

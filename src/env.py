@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-import logging
-
-
 ##########################################################################################
-###############################################
 #Initialization and environment configuration stuff:
 import os, sys, imp
 #­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
@@ -17,16 +13,18 @@ def get_main_dir():
         return os.path.dirname(sys.argv[0])
 base = get_main_dir()
 
-#sys.path += [os.path.join(base,'_L3_Common_Library', 'uut'),
-#             os.path.join(base,'_L3_Common_Library', 'labdevice')]
+sys.path += [os.path.join(base,'api'),
+             os.path.join(base,'ui')]
 
 if (hasattr(sys, "frozen") or hasattr(sys, "importers") or imp.is_frozen("__main__")):
     sys.path.insert(0,base)
-#­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
-# The following definitions set the folder structure for the host application.
-# This allows the host application to import modules and panels
-# while also keeping a folder structure.
-#­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
+
+
+##########################################################################################
+#Logging Environment
+##########################################################################################
+
+import logging
 
 class NullHandler(logging.Handler):
     def emit(self, record):
