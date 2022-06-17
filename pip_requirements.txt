@@ -3,7 +3,7 @@ Cython==0.20
 geopy==1.11.0
 Kivy==1.9.1
 Kivy-Garden==0.1.4
-numpy==1.10.2
+numpy==1.21.0
 Pillow==3.1.0
 requests==2.9.1
 urllib3==1.14
